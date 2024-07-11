@@ -1,0 +1,10 @@
+#
+services:
+  helm:
+    image: dockerapp/helm
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - HOSTOS=darwin
+        - HOSTARCH=arm64
